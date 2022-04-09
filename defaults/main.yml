@@ -1,0 +1,2 @@
+---
+tmux_conf_template_file: tmux.conf.j2

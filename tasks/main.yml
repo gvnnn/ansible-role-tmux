@@ -1,0 +1,10 @@
+---
+- name: Ensure tmux is installed
+  ansible.builtin.package:
+    name: tmux
+    state: present
+
+- name: Configure tmux
+  ansible.builtin.template:
+    src: "{{ tmux_conf_template_file }}"
+    dest: "{{ lookup('env', 'HOME') }}/.tmux.conf"
